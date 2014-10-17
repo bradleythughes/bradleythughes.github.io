@@ -1,0 +1,16 @@
+# Site settings
+title: Bradley T. Hughes 
+email: bradleythughes@fastmail.fm
+description: >
+  A chronic geek
+baseurl: ""
+url: "http://bradleythughes.github.io"
+twitter_username: _bradleythughes
+github_username:  bradleythughes
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+timezone: Europe/Oslo
+exclude: [ README.md ]
