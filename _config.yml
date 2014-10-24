@@ -7,6 +7,7 @@ baseurl: ""
 url: "http://bradleythughes.github.io"
 twitter_username: _bradleythughes
 github_username:  bradleythughes
+linkedin_username: bradleythughes
 
 # Build settings
 markdown: kramdown
