@@ -3,7 +3,7 @@ layout: post
 title: FreeBSD, Munin, and lighttpd
 ---
 
-I have a NAS at home (lovingly called `nasty.local`). It runs [FreeBSD](https://www.freebsd.org/) 10.1-RC3, with [Munin](http://munin-monitoring.org/) and [lighttpd](http://www.lighttpd.net/) installed via [ports](https://www .freebsd.org/ports/). It took me some time to figure out how to get this combination to work the way I wanted, mostly due to inexperience with Munin and lighttpd. I wanted to document what I had done in the hopes that other people would find the information useful.
+I have a NAS at home (lovingly called `nasty.local`) that runs [FreeBSD](https://www.freebsd.org/) 10.1-RC3, with [Munin](http://munin-monitoring.org/) and [lighttpd](http://www.lighttpd.net/) installed via [ports](https://www .freebsd.org/ports/). It took me some time to figure out how to get this combination to work the way I wanted, mostly due to inexperience with Munin and lighttpd. I wanted to document what I had done in the hopes that other people would find the information useful.
 
 ## Configuring munin-node
 
