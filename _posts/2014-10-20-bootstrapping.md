@@ -3,7 +3,6 @@ layout: post
 title: Bootstrapping bradleythughes.github.io
 ---
 
-# Bootstrapping bradleythughes.github.io
 A few days ago, I created a personal [GitHub Pages repository](https://github.com/bradleythughes/bradleythughes.github.io) with a minimal skeleton. It felt good. I had been wanting to do it for a while. However, it didn't have any content, until now.
 
 ## Jekyll
