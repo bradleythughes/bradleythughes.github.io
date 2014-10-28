@@ -1,0 +1,20 @@
+<div class="post">
+
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+
+    <footer>
+        <p class="post-meta">
+            Posted on {{ page.date | date: "%Y-%m-%d" }}
+            {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+            {% if page.url %} • <a href="{{ page.url | prepend: site.baseurl }}">Permalink</a>{% endif %}
+            • <a href="/archive.html">Archive</a>
+        </p>
+    </footer>
+
+</div>
