@@ -235,3 +235,9 @@
         }
     }
 }
+
+.block-image {
+    display: block;
+    margin: auto auto $spacing-unit/2 auto;
+    border: 1px solid $grey-color-light;
+}
