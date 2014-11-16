@@ -3,7 +3,7 @@ layout: post
 title: FreeBSD, Munin, and lighttpd
 ---
 
-I have a NAS at home (lovingly called `nasty.local`) that runs [FreeBSD](https://www.freebsd.org/) 10.1-RC3, with [Munin](http://munin-monitoring.org/) and [lighttpd](http://www.lighttpd.net/) installed via [ports](https://www .freebsd.org/ports/). It took me some time to figure out how to get this combination to work the way I wanted, mostly due to inexperience with Munin and lighttpd. I wanted to document what I had done in the hopes that other people would find the information useful.
+I have a NAS at home (lovingly called `nasty.home`) that runs [FreeBSD](https://www.freebsd.org/) 10.1-RC3, with [Munin](http://munin-monitoring.org/) and [lighttpd](http://www.lighttpd.net/) installed via [ports](https://www .freebsd.org/ports/). It took me some time to figure out how to get this combination to work the way I wanted, mostly due to inexperience with Munin and lighttpd. I wanted to document what I had done in the hopes that other people would find the information useful.
 
 ## Configuring munin-node
 
@@ -53,7 +53,7 @@ html_strategy cgi
 
 Munin puts its CGI and generated HTML in `/usr/local/www/cgi-bin` and `/usr/local/www/munin`, respectively. Note, however, that my `/usr/local/www/munin` directory is empty (see above). The default configuration of lighttpd uses `/usr/local/www/data` as the document-root. This directory is also empty. It's up to me to put something useful there. I haven't done this (yet!), so I get a 404 error for anything I try to browse on my NAS.
 
-I wanted to access the Munin graphs using `nasty.local/munin/`. I had found [an example configuration](http://munin-monitoring.org/wiki/MuninConfigurationMasterCGI) that I used as a starting point, and the result turned out to be not too bad:
+I wanted to access the Munin graphs using `nasty.home/munin/`. I had found [an example configuration](http://munin-monitoring.org/wiki/MuninConfigurationMasterCGI) that I used as a starting point, and the result turned out to be not too bad:
 
 ```
 $ cat /usr/local/etc/lighttpd/conf.d/munin.conf
@@ -72,7 +72,7 @@ url.rewrite-repeat += (
 )
 ```
 
-As you can see, I'm using plain, old CGI, since this "Just Works (tm)" with the default lighttpd install. The aliases tell lighttpd where to find static content and the CGI scripts, the rewrite rules which CGI script to call for a given URL. I had to make sure that the *.html rule matched both `/munin/` and `/munin/*.html` to ensure that the index was correctly generated for `nasty.local/munin/`.
+As you can see, I'm using plain, old CGI, since this "Just Works (tm)" with the default lighttpd install. The aliases tell lighttpd where to find static content and the CGI scripts, the rewrite rules which CGI script to call for a given URL. I had to make sure that the *.html rule matched both `/munin/` and `/munin/*.html` to ensure that the index was correctly generated for `nasty.home/munin/`.
 
 The final step was to tell lighttpd to load my conf file, which meant modifying the default configuration slightly:
 
@@ -90,7 +90,7 @@ $ diff -u /usr/local/etc/lighttpd/lighttpd.conf.sample /usr/local/etc/lighttpd/l
 +include "conf.d/munin.conf"
 ```
 
-Time to enable lighttpd and start it to give `nasty.local/munin/` a try in my browser:
+Time to enable lighttpd and start it to give `nasty.home/munin/` a try in my browser:
 
 ```
 $ sudo sysrc lighttpd_enable=YES
@@ -122,7 +122,7 @@ $ sudo newsyslog
 
 ## Surely it must work now?
 
-Yes. Yes, it does. I still haven't put anything useful in `/usr/local/www/data`, so browsing to `nasty.local/` returns a 404, but `nasty.local/munin/` works, as well as all the URLs under it.
+Yes. Yes, it does. I still haven't put anything useful in `/usr/local/www/data`, so browsing to `nasty.home/` returns a 404, but `nasty.home/munin/` works, as well as all the URLs under it.
 
 ## Rationale
 
