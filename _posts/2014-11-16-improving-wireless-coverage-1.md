@@ -5,7 +5,7 @@ title: Improving wireless coverage at home, part 1 - AP bridge on FreeBSD
 
 I have an all-in-one wireless router, ethernet switch, cable modem, cable decoder, PVR, and IP telephony device from our cable provider, the [Get box II](http://www.get.no/produkter/tv/getboksene).
 
-{% include block-image.html src="//www.get.no/produkter/tv/getboksene/_image/73282.png" %}
+{% include block-image.html src="http://www.get.no/produkter/tv/getboksene/_image/73282.png" %}
 
 It works well, has both 5 GHz and 2.4 GHz radios, supports IPv4 port forwarding, and even has full IPv6 support. It looks good too. I like it.
 
@@ -17,7 +17,7 @@ Being an all-in-one device has its drawbacks, though. In particular, the Get box
 
 I have [previously mentioned](/2014/10/28/freebsd-munin-lighttpd.html) my home NAS, `nasty.home`. The [motherboard](http://www.asrock.com/mb/amd/fm2a88x-itx+/) I bought for it has built-in wireless.
 
-{% include block-image.html src="//www.asrock.com/mb/photo/FM2A88X-ITX+(m).jpg" %}
+{% include block-image.html src="http://www.asrock.com/mb/photo/FM2A88X-ITX+(m).jpg" %}
 
 I wanted to try and set `nasty.home` up as an AP bridge without disrupting its main functions. The hope is that an additional AP can provide coverage for the painful areas of the house.
 
