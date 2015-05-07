@@ -51,15 +51,15 @@ $ zpool status
   scan: scrub repaired 0 in 3h52m with 0 errors on Thu Apr 30 07:01:50 2015
 config:
 
-	NAME                      STATE     READ WRITE CKSUM
-	Z                         ONLINE       0     0     0
-	  raidz2-0                ONLINE       0     0     0
-	    diskid/DISK-S1E33M3X  ONLINE       0     0     0
-	    diskid/DISK-S1E3362L  ONLINE       0     0     0
-	    diskid/DISK-S1E33QDQ  ONLINE       0     0     0
-	    diskid/DISK-S1E33M98  ONLINE       0     0     0
-	    diskid/DISK-S1E33P14  ONLINE       0     0     0
-	    diskid/DISK-S1E33M65  ONLINE       0     0     0
+    NAME                      STATE     READ WRITE CKSUM
+    Z                         ONLINE       0     0     0
+      raidz2-0                ONLINE       0     0     0
+        diskid/DISK-S1E33M3X  ONLINE       0     0     0
+        diskid/DISK-S1E3362L  ONLINE       0     0     0
+        diskid/DISK-S1E33QDQ  ONLINE       0     0     0
+        diskid/DISK-S1E33M98  ONLINE       0     0     0
+        diskid/DISK-S1E33P14  ONLINE       0     0     0
+        diskid/DISK-S1E33M65  ONLINE       0     0     0
 
 errors: No known data errors
 ```
