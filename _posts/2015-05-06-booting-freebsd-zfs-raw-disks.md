@@ -18,24 +18,27 @@ So in the end, I ended up doing it out of curiosity and for the experience.
 When I labeled the `gpt/zfs#` partitions, I used the same numbers as the `ada` devices. After destroying the GPT, an easy way to find the new label is using the `glabel status` command. This makes it quick and easy to find which labels to use in the replace step below. For example:
 
 ```
-$ glabel status
+$ glabel status ada0
                 Name  Status  Components
 diskid/DISK-S1E33M3X     N/A  ada0
-
 ```
 
 Replacing a disk in a pool is a well documented process. Mine is slightly different, but familiar nonetheless. Take the disk offline, destroy the GPT on it, and then replace the disk with the new `diskid/DISK-$SERIALNO` label, and wait for it to resilver. Repeat this process on each disk. Done.
 
+Well, almost done...
+
 ## You Need To Update the Boot Code
 
-Yes, I know. This is also where the documentation was lacking. I did not attempt to convert to using whole disks until after I found the `zfsboot.8` man page in the `10-STABLE` branch, which states `dd(1)` is typically used to install the boot code:
+Yes, I know.
+
+This is also where the documentation was lacking. This is what was stopping me from converting to using whole disks in the firts place. Thanks to the forum post mentioned above, I found the `zfsboot(8)` man page in the `10-STABLE` branch, which states `dd(1)` is typically used to install the boot code:
 
 ```
 dd if=/boot/zfsboot of=/dev/ada0 count=1
 dd if=/boot/zfsboot of=/dev/ada0 iseek=1 oseek=1024
 ```
 
-Repeat this process on each disk. Done (again).
+Repeat this process on each disk. Done.
 
 ## The Payoff
 
