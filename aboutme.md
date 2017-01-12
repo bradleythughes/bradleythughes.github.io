@@ -14,4 +14,4 @@ I am currently working for [Telenor Digital](https://www.telenordigital.com) on 
 I worked at Trolltech AS, later Trolltech ASA, from 2000 until the Nokia acquisition in 2008. I continued with Nokia until 2012 when I left to join Telenor Digital. During this time I worked on the [Qt Project](http://qt-project.org).
 
 ## Personal Life
-I am an Texan American expat living in Norway. I was born and raised in [Amarillo, Texas](http://en.wikipedia.org/wiki/Amarillo,_Texas). I moved to Norway in May 2000 at the age of 22 after accepting a job offer from Trolltech AS, and have been in Norway since.
+I am a Texan American expat living in Norway. I was born and raised in [Amarillo, Texas](http://en.wikipedia.org/wiki/Amarillo,_Texas). I moved to Norway in May 2000 at the age of 22 after accepting a job offer from Trolltech AS, and have been in Norway since.
